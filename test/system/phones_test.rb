@@ -14,7 +14,7 @@ class PhonesTest < ApplicationSystemTestCase
     visit phones_url
     click_on "New Phone"
 
-    fill_in "Text", with: @phone.text
+    fill_in "Name", with: @phone.name
     click_on "Create Phone"
 
     assert_text "Phone was successfully created"
@@ -25,7 +25,7 @@ class PhonesTest < ApplicationSystemTestCase
     visit phones_url
     click_on "Edit", match: :first
 
-    fill_in "Text", with: @phone.text
+    fill_in "Name", with: @phone.name
     click_on "Update Phone"
 
     assert_text "Phone was successfully updated"
