@@ -1,0 +1,10 @@
+<h1>第九次视频内容</h1>
+<p>CreditCards#credit</p>
+<p>Find me in app/views/credit_cards/credit.html.erb</p>
+<p>虽然这个网页和上一个网页:<%= link_to "动态显示时间", action: "open" %> 相同，但是这里的方法更好一些。</p>
+<p><mark>在视频中有相对详细的介绍，如何做到的。</mark></p>
+<p>更好一些的原因是在这里time的获取不是像上一个方法一样，在view中获取的，而是在controller中人传值过来的。这样比较符合MVC的编码方法，请各位考虑一下是不是这个道理 :)</p>
+<hr />
+<p>动态显示时间，<mark>刷新一下</mark>就会显示服务器上的时间，这个网页就动态生成的，<mark>下面这个时间值是由controller传过来的</mark>：</p>
+<br />
+<h1><%= @current_time %></h1>

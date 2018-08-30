@@ -1,0 +1,14 @@
+<h1>第九次视频内容</h1>
+<p>CreditCards#open</p>
+<p>Find me in app/views/credit_cards/open.html.erb</p>
+<hr />
+<p>(视频第九期)这是一个Demo演示的内容是如何产生动态的内容，在此处使用的方法并不好，更好的方法见另外视频里的另外一个方法。</p>
+<p>这个方法不好的原因是，将业务逻辑写在了view中，以后会带不必要的麻烦，比如以后要显示的是多个国家的时间，可能在view中的改动就会特别大。<p>
+<p>另外一个相对好的方法请查看app/views/credit_cards/debit.html.erb</p>
+<hr />
+<p>动态显示时间，<mark>刷新一下</mark>就会显示服务器上的时间，这个网页就动态生成的，<mark>下面这个时间值是在view中生成的</mark>：<p>
+<br />
+<h1><%= Time.now %></h1>
+<hr />
+<p>另外一个相对比较好的方法，只是做了MVC分离的一个方法:)在这个网页里</p>
+<h2><%= link_to "相对好一点的方法", action: "credit" %></h2>
