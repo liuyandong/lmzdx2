@@ -1,12 +1,26 @@
-Find me in app/views/phones/index.html.erb
+<% provide(:title, "部署测试页")%>
+
 <p id="notice"><%= notice %></p>
 
-<h1>列出你知道的手机名称</h1>
+<div class="center jumbotron">
+	<h2>
+		这里布署的是我的<%= link_to "编程视频课", "http://study.163.com/course/courseMain.htm?courseId=1005687008&share=2&shareId=1019590015" %>里面的代码</h2>
+		<h2>这个网站会随着视频逐渐进化</h2>
+		<h2>最终会做出Twitter网站的功能和样子</h2>
+		<h2>虽然她现在还很弱小，但是，总有一天会长大的</h2>
+		<h2>在我的视频里，我会解释每一行代码的原理</h2>
+</div>
+
+<h2>下面是测试部署是否成功的一个小功能</h2>
+<h2>用来测试web框架和数据库是否能正常运行</h2>
+<br />
+<h3><mark>列出你知道的手机品牌，存入mysql数据库中，可以随意增删</mark></h3>
+<br />
 
 <table>
   <thead>
     <tr>
-      <th>Name</th>
+      <th><h2>手机品牌列表<h2></th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -15,9 +29,9 @@ Find me in app/views/phones/index.html.erb
     <% @phones.each do |phone| %>
       <tr>
         <td><%= phone.name %></td>
-        <td><%= link_to 'Show', phone %></td>
-        <td><%= link_to 'Edit', edit_phone_path(phone) %></td>
-        <td><%= link_to 'Destroy', phone, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to '显示', phone %></td>
+        <td><%= link_to '编辑', edit_phone_path(phone) %></td>
+        <td><%= link_to '删除', phone, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>
@@ -25,7 +39,9 @@ Find me in app/views/phones/index.html.erb
 
 <br>
 
-<%= link_to 'New Phone', new_phone_path %>
+<div class="btn btn-primary">
+  <%= link_to '输入手机品牌', new_phone_path, {:style=>'color:#FFFFFF;', :class => "css_class"} %> 
+</div>
 
 	<br />
 	<br />
