@@ -1,0 +1,31 @@
+<div class="container">
+	<h2>这里是所有注册用户的列表，我会在某一天(大约在冬季 :)把这里的数据清空。</h2>
+	<h2>希望大家不要写自己<mark>重要的</mark>私人电子邮件！</h2>
+	<h2>如果你也想试试注册模块的功能，请点击下面这个链接：</h2>
+	
+	<div class="btn btn-primary">
+	  <%= link_to '注册新用户', new_user_path, {:style=>'color:#FFFFFF;', :class => "css_class"} %> 
+	</div>
+	
+<table class="table">
+	<br />
+  <thead>
+    <tr>
+      <th scope="col">ID</th>
+      <th scope="col">用户名</th>
+      <th scope="col">电子邮件</th>
+      <th scope="col">哈希加密后的密码</th>
+    </tr>
+  </thead>
+  <tbody>
+	<% @users.each do |user| %>
+    <tr>
+      <th scope="row"><%= user.id %></th>
+      <td><%= user.name %></td>
+      <td><%= user.email %></td>
+      <td><%= user.password_digest %></td>
+    </tr>
+	<% end %>
+  </tbody>
+</table>
+</div>

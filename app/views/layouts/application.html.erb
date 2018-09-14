@@ -17,12 +17,24 @@
 				<ul class="nav navbar-nav mr-auto">
 					<li><%= link_to "主页", '#'%></li> | 
 					<li><%= link_to "介绍", '#'%></li> |
-					<li><%= link_to "注册", '#'%></li>
+					<li><%= link_to "注册", new_user_path %></li>
 				</ul>
 			</nav>
 		</div>
 	</header>
+	<br />
 <div class="container">
+	<div class="center jumbotron">
+		<h2>
+			这里布署的是我的<%= link_to "编程视频课", "http://study.163.com/course/courseMain.htm?courseId=1005687008&share=2&shareId=1019590015" %>里面的代码</h2>
+			<h2>这个网站会随着视频逐渐进化</h2>
+			<h2>最终会做出Twitter网站的功能和样子</h2>
+			<h2>虽然她现在还很弱小，但是，总有一天会长大的</h2>
+			<h2>在我的视频里，我会解释每一行代码的原理</h2>
+	</div>
+	<% flash.each do |message_type, message| %>
+	  <div class="alert alert-<%= message_type %>"><%= message %>
+	<% end %>
     <%= yield %>
 </div>
 	

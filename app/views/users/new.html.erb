@@ -1,0 +1,28 @@
+<%provide(:title, "测试注册新用户")%>
+<h1>测试注册新用户</h1>
+<h2>请不要用你真实的Email，<mark>乱编一个格式正确的就好</mark></h2>
+
+<div class="im-center">
+<div class="row">
+	<div class="col-md-12">
+		<%= form_for(@user, url: signup_path) do |f| %>
+		<%= render 'shared/error_messages' %>
+		  <%= f.label :name, "用户名" %>
+		  <%= f.text_field :name %>
+		
+		  <%= f.label :email, "电子邮件" %>
+		  <%= f.text_field :email %>
+		  
+		  <%= f.label :password, "密码" %>
+		  <%= f.password_field :password %>
+		  
+		  <%= f.label :password_confirmation, "确认密码" %>
+		  <%= f.password_field :password_confirmation %>
+		
+		  <%= f.submit "创建新用户", class: "btn btn-primary" %>
+		<% end %>
+	</div>
+</div>
+</div>
+		
+		

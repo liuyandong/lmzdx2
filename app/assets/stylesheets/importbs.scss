@@ -1,5 +1,11 @@
 @import "bootstrap";
 
+@mixin box_sizing {
+	-moz-box-size: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
 #logo {
 float: left;
 margin-right: 10px;
@@ -24,4 +30,30 @@ display: inline;
 color: red;
 font-size: 1.5em;
 padding: 5px 20px;
+}
+
+/* forms */
+
+input, textarea, select, .uneditable-input {
+	border: 1px solid #bbb;
+	width: 100%;
+	margin-bottom: 15px;
+	@include box_sizing;
+}
+
+input {
+	height: auto !important;
+}
+
+.im-center { 
+	margin: auto; 
+	width: 60%;
+}
+
+// Place all the styles related to the YourController controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+form .clearfix:before, form .clearfix:after {
+  display: inline;
 }
