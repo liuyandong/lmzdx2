@@ -22,7 +22,7 @@
 	<% @users.each do |user| %>
     <tr>
       <th scope="row"><%= user.id %></th>
-	  <td><%= user.created_at %></td>
+	  <td><%= user.created_at.strftime('%F %T') %></td>
       <td><%= user.name %></td>
       <td><%= user.email %></td>
       <td><%= user.password_digest %></td>
