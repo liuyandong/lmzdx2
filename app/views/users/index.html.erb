@@ -12,6 +12,7 @@
   <thead>
     <tr>
       <th scope="col">ID</th>
+	  <th scope="col">注册时间</th>
       <th scope="col">用户名</th>
       <th scope="col">电子邮件</th>
       <th scope="col">哈希加密后的密码</th>
@@ -21,6 +22,7 @@
 	<% @users.each do |user| %>
     <tr>
       <th scope="row"><%= user.id %></th>
+	  <td><%= user.created_at %></td>
       <td><%= user.name %></td>
       <td><%= user.email %></td>
       <td><%= user.password_digest %></td>
