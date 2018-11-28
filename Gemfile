@@ -10,7 +10,9 @@ gem 'nokogiri', '~> 1.8', '>= 1.8.4'
 gem 'bcrypt', '~> 3.1', '>= 3.1.12'
 gem 'i18n', '~> 1.1', '>= 1.1.1'
 # Use mysql as the database for Active Record
-gem 'mysql2', '>= 0.4.4', '< 0.6.0'
+# gem 'mysql2', '>= 0.4.4', '< 0.6.0'
+# Use postgresql as the database for Active Record
+gem 'pg', '>= 0.18', '< 2.0'
 # Use Puma as the app server
 gem 'puma', '~> 3.11'
 # Use SCSS for stylesheets
