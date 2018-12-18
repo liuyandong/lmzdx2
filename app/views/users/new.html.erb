@@ -6,7 +6,7 @@
 <div class="im-center">
 <div class="row">
 	<div class="col-md-12">
-		<%= form_for(@user, url: signup_path) do |f| %>
+		<%= form_with model: @user, local: true do |f| %>
 		<%= render 'shared/error_messages' %>
 		  <%= f.label :name, "用户名" %>
 		  <%= f.text_field :name %>
